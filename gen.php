@@ -1,12 +1,11 @@
-<style>
-table {
-	border-collapse: collapse;
-}
-td {
-	border: solid 1px;
-	padding: 0.5em;
-}
-</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>席替えメーカー</title>
+  </head>
+  <body>
+
 <?php
 
  function generateSeat($col = 0, $row = 0)
@@ -43,7 +42,7 @@ td {
  function outputSeat($seat)
 { ?>
   <h1>席替えの結果</h1>
-<table>
+<table border="1" width="300px">
   <?php
   foreach ($seat as $keyr => $row) {
     ?>
@@ -72,6 +71,10 @@ td {
 
 }
 
-generateSeat(3, 5);
+// 座席の縦の数, 横の数
+generateSeat(4, 7);
 
  ?>
+ <button size="200" onclick="history.back()">戻る</button>
+ </body>
+</html>
