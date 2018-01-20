@@ -50,11 +50,9 @@
     <?php
     foreach ($row as $keyc => $col) {
       ?>
-      <td>
-      <?php
+    <td><?php
       echo $col+1;
-      ?>
-    </td>
+      ?></td>
     <?php
     }
     ?>
@@ -72,9 +70,16 @@
 }
 
 // 座席の縦の数, 横の数
-generateSeat(4, 7);
+if(isset($_GET['col'])&&isset($_GET['row'])){
+generateSeat($_GET['col'], $_GET['row']);
+}
+else {
+  ?><p>不正な操作です。</p><?php
+}
+
 
  ?>
  <button size="200" onclick="history.back()">戻る</button>
+ <button size="200" onclick="window.location.reload()">再生成</button>
  </body>
 </html>

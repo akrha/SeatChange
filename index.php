@@ -6,6 +6,12 @@
   </head>
   <body>
     <h1>席替えメーカー</h1>
-    <p size="400%"><strong><a href="gen.php">GO!</a></strong></p>
+    <form action="gen.php" method="get">
+      <p>数値を入力...</p>
+      <p>たて：<input type="text" name="col" value="" required></p>
+      <p>よこ：<input type="text" name="row" value="" required></p>
+      <p><input type="submit" name="" value="作成！"></p>
+    </form>
+    <footer>© 2018 AKIRA HASEGAWA</footer>
   </body>
 </html>
